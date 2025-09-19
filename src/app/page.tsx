@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowRight, Bot, Briefcase, Target } from 'lucide-react';
+import { ArrowRight, Bot, Briefcase, Target, FileText, Sparkles } from 'lucide-react';
 import { PageAnimationWrapper } from '@/components/page-animation-wrapper';
 
 export default function Home() {
@@ -44,7 +44,7 @@ export default function Home() {
               <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">Features</h2>
               <p className="mt-4 text-muted-foreground">Discover how SkillMapper AI can transform your career path.</p>
             </div>
-             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                <div className="glassmorphism rounded-xl p-6 text-center flex flex-col items-center">
                  <Target className="w-12 h-12 mb-4 text-primary"/>
                  <h3 className="font-headline text-xl font-semibold">AI Career Recommendations</h3>
@@ -55,6 +55,16 @@ export default function Home() {
                  <h3 className="font-headline text-xl font-semibold">Job Postings</h3>
                  <p className="mt-2 text-muted-foreground">Explore relevant job openings that match your skills and career goals.</p>
                </div>
+                <div className="glassmorphism rounded-xl p-6 text-center flex flex-col items-center">
+                    <Sparkles className="w-12 h-12 mb-4 text-primary"/>
+                    <h3 className="font-headline text-xl font-semibold">Career Match Quiz</h3>
+                    <p className="mt-2 text-muted-foreground">Take a fun quiz and discover the best career paths for you.</p>
+                </div>
+                <div className="glassmorphism rounded-xl p-6 text-center flex flex-col items-center">
+                    <FileText className="w-12 h-12 mb-4 text-primary"/>
+                    <h3 className="font-headline text-xl font-semibold">AI Resume Builder</h3>
+                    <p className="mt-2 text-muted-foreground">Build a professional resume with the help of our AI assistant.</p>
+                </div>
                <div className="glassmorphism rounded-xl p-6 text-center flex flex-col items-center">
                  <Bot className="w-12 h-12 mb-4 text-primary"/>
                  <h3 className="font-headline text-xl font-semibold">AI Chatbot Assistant</h3>

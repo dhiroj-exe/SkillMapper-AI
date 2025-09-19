@@ -14,6 +14,8 @@ const navLinks = [
   { href: '/recommendations', label: 'Recommendations' },
   { href: '/dashboard', label: 'Dashboard' },
   { href: '/jobs', label: 'Job Postings' },
+  { href: '/quiz', label: 'Career Quiz' },
+  { href: '/resume-builder', label: 'Resume Builder' },
 ];
 
 export default function Header() {
