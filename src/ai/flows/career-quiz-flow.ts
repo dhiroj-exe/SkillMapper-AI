@@ -10,12 +10,12 @@
 import { ai } from '@/ai/genkit';
 import { z } from 'genkit';
 
-export const CareerQuizInputSchema = z.object({
+const CareerQuizInputSchema = z.object({
   answers: z.array(z.string()).describe('An array of answers to the quiz questions.'),
 });
 export type CareerQuizInput = z.infer<typeof CareerQuizInputSchema>;
 
-export const CareerQuizOutputSchema = z.object({
+const CareerQuizOutputSchema = z.object({
   recommendations: z.array(
     z.object({
       career: z.string().describe('The recommended career path.'),
@@ -26,10 +26,6 @@ export const CareerQuizOutputSchema = z.object({
   ).describe('A list of 3 recommended careers with pros, cons, and salary trends.'),
 });
 export type CareerQuizOutput = z.infer<typeof CareerQuizOutputSchema>;
-
-export async function careerQuiz(input: CareerQuizInput): Promise<CareerQuizOutput> {
-  return careerQuizFlow(input);
-}
 
 const prompt = ai.definePrompt({
   name: 'careerQuizPrompt',
@@ -57,3 +53,7 @@ const careerQuizFlow = ai.defineFlow(
     return output!;
   }
 );
+
+export async function careerQuiz(input: CareerQuizInput): Promise<CareerQuizOutput> {
+  return careerQuizFlow(input);
+}

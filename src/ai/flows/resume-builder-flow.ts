@@ -10,7 +10,7 @@
 import { ai } from '@/ai/genkit';
 import { z } from 'genkit';
 
-export const ResumeBuilderInputSchema = z.object({
+const ResumeBuilderInputSchema = z.object({
   fullName: z.string().describe("The user's full name."),
   email: z.string().describe("The user's email address."),
   phone: z.string().describe("The user's phone number."),
@@ -35,7 +35,7 @@ export const ResumeBuilderInputSchema = z.object({
 });
 export type ResumeBuilderInput = z.infer<typeof ResumeBuilderInputSchema>;
 
-export const ResumeBuilderOutputSchema = z.object({
+const ResumeBuilderOutputSchema = z.object({
     improvedSummary: z.string().describe("An improved, professionally worded summary."),
     suggestedSkills: z.array(z.string()).describe("A list of suggested skills to add."),
     formattedExperience: z.array(z.object({
@@ -48,10 +48,6 @@ export const ResumeBuilderOutputSchema = z.object({
     })),
 });
 export type ResumeBuilderOutput = z.infer<typeof ResumeBuilderOutputSchema>;
-
-export async function resumeBuilder(input: ResumeBuilderInput): Promise<ResumeBuilderOutput> {
-  return resumeBuilderFlow(input);
-}
 
 const prompt = ai.definePrompt({
   name: 'resumeBuilderPrompt',
@@ -108,3 +104,7 @@ const resumeBuilderFlow = ai.defineFlow(
     return output!;
   }
 );
+
+export async function resumeBuilder(input: ResumeBuilderInput): Promise<ResumeBuilderOutput> {
+  return resumeBuilderFlow(input);
+}
