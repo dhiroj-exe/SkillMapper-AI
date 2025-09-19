@@ -47,7 +47,7 @@ export default function ResumeBuilderPage() {
                   </AccordionTrigger>
                   <AccordionContent>
                     Yes, your privacy is important to us. The data you enter is only used to generate your resume and is not stored or used for any other purpose.
-                  </a/AccordionContent>
+                  </AccordionContent>
                 </AccordionItem>
               </Accordion>
             </div>
