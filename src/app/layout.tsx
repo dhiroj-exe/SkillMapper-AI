@@ -6,6 +6,7 @@ import { ThemeProvider } from '@/components/providers/theme-provider';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
+import { Chatbot } from '@/components/chatbot/chatbot';
 
 const fontInter = Inter({
   subsets: ['latin'],
@@ -53,6 +54,7 @@ export default function RootLayout({
             <main className="flex-1">{children}</main>
             <Footer />
           </div>
+          <Chatbot />
           <Toaster />
         </ThemeProvider>
       </body>

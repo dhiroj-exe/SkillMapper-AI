@@ -7,12 +7,13 @@ import { ThemeToggle } from '@/components/theme-toggle';
 import { Logo } from '@/components/icons';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu } from 'lucide-react';
+import { LogIn, Menu } from 'lucide-react';
 
 const navLinks = [
   { href: '/skills', label: 'Start Here' },
   { href: '/recommendations', label: 'Recommendations' },
   { href: '/dashboard', label: 'Dashboard' },
+  { href: '/jobs', label: 'Job Postings' },
 ];
 
 export default function Header() {
@@ -82,6 +83,12 @@ export default function Header() {
 
         <div className="flex flex-1 items-center justify-end space-x-2">
           <ThemeToggle />
+          <Button asChild variant="outline" size="sm">
+            <Link href="/login">
+              <LogIn className="mr-2 h-4 w-4" />
+              Login
+            </Link>
+          </Button>
         </div>
       </div>
     </header>

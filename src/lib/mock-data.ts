@@ -38,4 +38,39 @@ export const MOCK_SKILLS = [
     { name: 'Sat', total: Math.floor(Math.random() * 120) + 10 },
     { name: 'Sun', total: Math.floor(Math.random() * 120) + 10 },
   ];
+
+  export const MOCK_JOBS = [
+    {
+      title: 'Senior Frontend Engineer',
+      company: 'Innovate Inc.',
+      location: 'Remote',
+      tags: ['React', 'TypeScript', 'Next.js'],
+      match: 95,
+      posted: '2 days ago',
+    },
+    {
+      title: 'Full-Stack Developer',
+      company: 'Creative Solutions',
+      location: 'New York, NY',
+      tags: ['Node.js', 'React', 'GraphQL'],
+      match: 88,
+      posted: '5 days ago',
+    },
+    {
+      title: 'Lead Product Designer',
+      company: 'DataDriven Co.',
+      location: 'San Francisco, CA',
+      tags: ['UX', 'UI', 'Figma'],
+      match: 82,
+      posted: '1 week ago',
+    },
+    {
+      title: 'DevOps Engineer',
+      company: 'CloudFlow',
+      location: 'Austin, TX',
+      tags: ['AWS', 'Kubernetes', 'CI/CD'],
+      match: 76,
+      posted: '2 weeks ago',
+    },
+  ];
   
