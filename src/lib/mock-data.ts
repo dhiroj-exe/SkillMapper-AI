@@ -74,3 +74,97 @@ export const MOCK_SKILLS = [
     },
   ];
   
+  // --- New: Standardized AI fallbacks ---
+  export const MOCK_LEARNING_RECOMMENDATIONS = {
+    skillGaps: [
+      'System Design',
+      'Data Structures & Algorithms',
+      'Cloud Fundamentals (AWS/GCP/Azure)',
+      'Testing (Jest, React Testing Library)',
+      'CI/CD & DevOps Basics',
+    ],
+    recommendedResources: [
+      'Grokking the System Design Interview (Educative)',
+      'The Missing Semester of CS (MIT OpenCourseWare)',
+      'AWS Certified Cloud Practitioner Free Course (freeCodeCamp)',
+      'Jest + RTL Testing Crash Course (YouTube)',
+      'CI/CD for Beginners with GitHub Actions (Blog Series)'
+    ]
+  };
+
+  export const MOCK_QUIZ_RESULTS = {
+    recommendations: [
+      {
+        career: 'Data Scientist',
+        pros: [
+          'High demand across industries',
+          'Strong salary growth',
+          'Impactful, data-driven work'
+        ],
+        cons: [
+          'Steep learning curve in statistics',
+          'Tooling changes quickly'
+        ],
+        salaryTrend: 'Upward trend with 10-15% YoY growth in many regions.'
+      },
+      {
+        career: 'Full-Stack Developer',
+        pros: [
+          'Versatile skill set',
+          'Opportunities in startups and enterprises'
+        ],
+        cons: [
+          'Requires balancing frontend and backend depth'
+        ],
+        salaryTrend: 'Stable to upward trend with strong mid-level demand.'
+      },
+      {
+        career: 'ML Engineer',
+        pros: [
+          'Cutting-edge projects',
+          'High-impact roles in AI-driven companies'
+        ],
+        cons: [
+          'Heavy math/ML foundations required'
+        ],
+        salaryTrend: 'Strong upward trend in AI-focused sectors.'
+      }
+    ]
+  };
+
+  export const MOCK_RESUME_OUTPUT = {
+    improvedSummary:
+      'Full-stack developer with 3+ years of experience building scalable web applications. Known for writing clean, maintainable code, collaborating cross-functionally, and delivering user-centric features. Passionate about performance, DX, and continuous learning.',
+    suggestedSkills: [
+      'Next.js',
+      'React Query',
+      'Playwright',
+      'Docker',
+      'Kubernetes Basics',
+      'AWS (EC2, S3, CloudFront)',
+      'Redis',
+      'PostgreSQL',
+      'CI/CD (GitHub Actions)',
+      'Monitoring (Sentry, Grafana)'
+    ],
+    formattedExperience: [
+      {
+        jobTitle: 'Software Engineer',
+        company: 'Tech Corp',
+        location: 'San Francisco, CA',
+        startDate: 'Jan 2022',
+        endDate: 'Present',
+        formattedResponsibilities: [
+          'Developed and shipped features used by 50k+ monthly users with React and Next.js.',
+          'Reduced API response times by 30% by optimizing DB queries and adding Redis caching.',
+          'Improved test coverage to 85% with Jest and React Testing Library.',
+        ]
+      }
+    ]
+  };
+
+  export const MOCK_CHATBOT_REPLY = `Here are a few things I can help with while the AI is warming up:
+- Suggest career paths based on your skills (try: "I know React and Python")
+- Identify skill gaps for a target role (try: "I want to be a data engineer")
+- Recommend learning resources (try: "Courses for system design basics")
+If this persists, the live AI service might be unavailable — using mock tips for now.`;

@@ -25,7 +25,7 @@ async function RecommendationsPage({ searchParams }: RecommendationsPageProps) {
       });
     } catch (e) {
       console.error(e);
-      error = "Sorry, we couldn't generate recommendations at this time. Please try again later.";
+      error = "Sorry, we couldn't generate recommendations at this time. Because Gemini AI API is not Added";
     }
   } else {
     error = "Please provide your skills and a desired career path to get recommendations.";
